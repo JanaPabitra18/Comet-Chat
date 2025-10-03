@@ -24,7 +24,13 @@ app.use(cookieParser());
 // }
 app.use(cors({
     origin:'https://comet-chat-frontend.onrender.com',
-    credentials:true ,   //access-control-allow-credentials:true
+    credentials:true ,  
+      // 3. Optional: Define allowed methods
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    
+    // 4. Optional: Allow the Authorization header if you also support JWTs via headers
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    //access-control-allow-credentials:true
      optionSuccessStatus:200
 }));
 
