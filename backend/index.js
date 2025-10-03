@@ -23,7 +23,7 @@ app.use(cookieParser());
 //     // optionSuccessStatus:200
 // }
 app.use(cors({
-    origin:'http://localhost:5173',
+    origin:'https://comet-chat-frontend.onrender.com/login',
     credentials:true ,   //access-control-allow-credentials:true
      optionSuccessStatus:200
 }));
