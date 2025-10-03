@@ -23,7 +23,7 @@ app.use(cookieParser());
 //     // optionSuccessStatus:200
 // }
 app.use(cors({
-    origin:'https://comet-chat-frontend.onrender.com/login',
+    origin:'https://comet-chat-frontend.onrender.com',
     credentials:true ,   //access-control-allow-credentials:true
      optionSuccessStatus:200
 }));
