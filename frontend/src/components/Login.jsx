@@ -20,7 +20,7 @@ function Login() {
             e.preventDefault();
             // console.log(user);
              try{
-            const res=await axios.post("{}/api/v1/user/login",user,{
+            const res=await axios.post(`${ BASE_URL}/api/v1/user/login`,user,{
             headers:{
                 "Content-Type":"application/json"
             },
