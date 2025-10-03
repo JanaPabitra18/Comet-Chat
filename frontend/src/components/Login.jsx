@@ -5,6 +5,7 @@ import axios from 'axios';
 import { toast } from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
 import { setAuthUser } from '../redux/userSlice';
+import { BASE_URL } from '../main.jsx';
 function Login() {
      const [ user,setUser]=useState({
            
@@ -19,7 +20,7 @@ function Login() {
             e.preventDefault();
             // console.log(user);
              try{
-            const res=await axios.post("http://localhost:8080/api/v1/user/login",user,{
+            const res=await axios.post("{}/api/v1/user/login",user,{
             headers:{
                 "Content-Type":"application/json"
             },
