@@ -11,7 +11,6 @@ const dispatch =useDispatch();
     if (!selectedUser?._id) return;
     const fetchMessages = async () => {
         try {
-            axios.defaults.withCredentials=true;
          const res = await axios.get(`${BASE_URL}/api/v1/message/${selectedUser?._id}`,
               {withCredentials:true } );
          // Normalize response to an array
