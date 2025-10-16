@@ -110,6 +110,7 @@ export const loginUser = async (req, res) => {
 
         // Return success response
         return res.status(200).cookie("token", token, { httpOnly: true,
+                                                       
     // Add sameSite: 'none' and secure: true for production across different domains
     secure: process.env.NODE_ENV === 'production', 
     sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
